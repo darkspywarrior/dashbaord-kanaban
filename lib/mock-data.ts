@@ -453,17 +453,17 @@ export const weeklyProgress = [
 ]
 
 export const tasksByPriority = [
-  { priority: "High", count: 4, fill: "var(--color-chart-5)" },
-  { priority: "Medium", count: 8, fill: "var(--color-warning)" },
-  { priority: "Low", count: 6, fill: "var(--color-chart-2)" },
+  { priority: "High", count: 4, fill: "#ef4444" },
+  { priority: "Medium", count: 8, fill: "#f59e0b" },
+  { priority: "Low", count: 6, fill: "#22c55e" },
 ]
 
 export const tasksByStatus = [
-  { status: "Backlog", count: 3, fill: "var(--color-muted-foreground)" },
-  { status: "To Do", count: 4, fill: "var(--color-chart-1)" },
-  { status: "In Progress", count: 3, fill: "var(--color-warning)" },
-  { status: "Review", count: 2, fill: "var(--color-chart-4)" },
-  { status: "Done", count: 8, fill: "var(--color-success)" },
+  { status: "Backlog", count: 3, fill: "#6b7280" },
+  { status: "To Do", count: 4, fill: "#3b82f6" },
+  { status: "In Progress", count: 3, fill: "#f59e0b" },
+  { status: "Review", count: 2, fill: "#a855f7" },
+  { status: "Done", count: 8, fill: "#22c55e" },
 ]
 
 export const projectProgress = projects.slice(0, 4).map((p) => ({

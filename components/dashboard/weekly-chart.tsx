@@ -47,13 +47,13 @@ export function WeeklyChart() {
               <Bar
                 dataKey="completed"
                 name="Completed"
-                fill="hsl(var(--success))"
+                fill="#22c55e"
                 radius={[4, 4, 0, 0]}
               />
               <Bar
                 dataKey="created"
                 name="Created"
-                fill="hsl(var(--primary))"
+                fill="#3b82f6"
                 radius={[4, 4, 0, 0]}
               />
             </BarChart>
