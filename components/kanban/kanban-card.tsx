@@ -13,7 +13,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { MessageSquare, Paperclip, MoreHorizontal, Calendar, GripVertical } from "lucide-react"
-import { Task, teamMembers, Priority } from "@/lib/kanban-data"
+import type { Task, Priority } from "@/lib/types"
+import { teamMembers } from "@/lib/mock-data"
 import { cn } from "@/lib/utils"
 
 interface KanbanCardProps {
@@ -49,7 +50,7 @@ export function KanbanCard({ task, isDragging }: KanbanCardProps) {
       ref={setNodeRef}
       style={style}
       className={cn(
-        "cursor-grab bg-card border-border/50 hover:border-border transition-all",
+        "group cursor-grab bg-card border-border/50 hover:border-border transition-all",
         (isDragging || isSortableDragging) && "opacity-50 rotate-2 scale-105 shadow-xl cursor-grabbing"
       )}
     >

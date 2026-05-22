@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Plus } from "lucide-react"
-import { Column, Task } from "@/lib/kanban-data"
+import type { Column, Task } from "@/lib/types"
 import { KanbanCard } from "./kanban-card"
 import { cn } from "@/lib/utils"
 

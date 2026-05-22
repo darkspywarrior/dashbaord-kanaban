@@ -14,13 +14,19 @@ import {
   DragOverEvent,
 } from "@dnd-kit/core"
 import { sortableKeyboardCoordinates, arrayMove } from "@dnd-kit/sortable"
-import { columns, initialTasks, Status, Task } from "@/lib/kanban-data"
+import { columns } from "@/lib/mock-data"
+import { tasks as defaultTasks } from "@/lib/mock-data"
+import type { Task, Status } from "@/lib/types"
 import { KanbanColumn } from "./kanban-column"
 import { KanbanCard } from "./kanban-card"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
-export function KanbanBoard() {
-  const [tasks, setTasks] = useState<Task[]>(initialTasks)
+interface KanbanBoardProps {
+  initialTasks?: Task[]
+}
+
+export function KanbanBoard({ initialTasks }: KanbanBoardProps) {
+  const [tasks, setTasks] = useState<Task[]>(initialTasks || defaultTasks)
   const [activeTask, setActiveTask] = useState<Task | null>(null)
 
   const sensors = useSensors(
@@ -125,7 +131,7 @@ export function KanbanBoard() {
       onDragEnd={handleDragEnd}
     >
       <ScrollArea className="w-full h-full">
-        <div className="flex gap-4 p-4 h-full min-h-[calc(100vh-12rem)]">
+        <div className="flex gap-4 p-1 h-full min-h-[calc(100vh-20rem)]">
           {columns.map((column) => (
             <KanbanColumn
               key={column.id}

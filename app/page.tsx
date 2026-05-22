@@ -1,5 +1,5 @@
-import { KanbanDashboard } from "@/components/kanban/kanban-dashboard"
+import { redirect } from "next/navigation"
 
 export default function Page() {
-  return <KanbanDashboard />
+  redirect("/dashboard")
 }

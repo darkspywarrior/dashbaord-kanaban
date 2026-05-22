@@ -1,0 +1,7 @@
+export { StatsCard } from "./stats-card"
+export { WeeklyChart } from "./weekly-chart"
+export { TasksByStatusChart } from "./tasks-by-status-chart"
+export { ActivityFeed } from "./activity-feed"
+export { RecentTasks } from "./recent-tasks"
+export { ProjectProgress } from "./project-progress"
+export { UpcomingDeadlines } from "./upcoming-deadlines"
