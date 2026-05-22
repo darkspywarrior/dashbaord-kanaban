@@ -1,0 +1,5 @@
+import { KanbanDashboard } from "@/components/kanban/kanban-dashboard"
+
+export default function Page() {
+  return <KanbanDashboard />
+}
